@@ -27,8 +27,8 @@ def get_img():
    return img_rgb
     
 def find_trex(img_rgb):          
-    img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)      #
-    res = cv2.matchTemplate(img_gray,tRex,cv2.TM_CCOEFF_NORMED)    #    
+    img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
+    res = cv2.matchTemplate(img_gray,tRex,cv2.TM_CCOEFF_NORMED)   
     threshold = 0.8            
     try:                      
         loc = np.where(  res >= threshold)   
