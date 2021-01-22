@@ -49,14 +49,13 @@ for region in regionprops(labeled):
     else:
         balls.append(val)
 
-print("Number of rects:", len(rects))
-rectangle_colors = count_colors(rects)
-print(rectangle_colors)
-        
 print("Number of balls:", len(balls))
 ball_colors = count_colors(balls)
 print(ball_colors)
 
+print("Number of rects:", len(rects))
+rectangle_colors = count_colors(rects)
+print(rectangle_colors)
 
 plt.figure()
 plt.imshow(image)
